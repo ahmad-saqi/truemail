@@ -1,15 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 
-import GlobalLayout from "./components/global-layout";
-import RouteGuard from "./components/route-guard";
-import Dashboard from "./pages/dashboard";
-import Login from "./pages/login";
 
+
+import Landing from "./pages/landing";
 const App = () => {
   return (
     <Routes>
-      <Route index element={<Login />} />
-      <Route
+      <Route path="/landing" element ={<Landing />} />
+      {/* <Route
         element={
           <RouteGuard>
             <GlobalLayout />
@@ -17,7 +15,7 @@ const App = () => {
         }
       >
         <Route path="/dashboard" element={<Dashboard />} />
-      </Route>
+      </Route> */}
     </Routes>
   );
 };
