@@ -85,3 +85,12 @@
     local("Faktum Test Regular"),
     url("../fonts/Rene Bieder - Faktum Test Regular.otf") format("opentype");
 }
+
+@font-face {
+  font-family: "Faktum Test";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local("Faktum Test Regular"),
+    url("../fonts/Rene Bieder - Faktum Test Bold.otf") format("opentype");
+}
