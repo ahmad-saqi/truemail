@@ -1,12 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 
-
-
 import Landing from "./pages/landing";
+
 const App = () => {
   return (
     <Routes>
-      <Route path="/landing" element ={<Landing />} />
+      <Route path="/landing" element={<Landing />} />
       {/* <Route
         element={
           <RouteGuard>
