@@ -32,7 +32,7 @@ const Pricing = () => {
             25,000 <span className="text-xs font-light">credits for</span> $175
           </p>
         </div>
-        <div className="flex flex-col gap-2 items-center justify-between rounded-[40px] bg-primary p-10 lg:rounded-none lg:rounded-r-[40px] lg:rounded-t-[40px]">
+        <div className="flex flex-col items-center justify-between gap-2 rounded-[40px] bg-primary p-10 lg:rounded-none lg:rounded-r-[40px] lg:rounded-t-[40px]">
           <h1 className="text-2xl font-bold text-white">$38</h1>
           <div className="ml-6 flex w-full items-center justify-center gap-10">
             <div>

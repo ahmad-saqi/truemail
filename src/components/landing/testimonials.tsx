@@ -45,7 +45,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <Carousel className="w-full lg:w-3/4 mx-auto">
+    <Carousel className="mx-auto w-full lg:w-3/4">
       <CarouselContent>
         {testimonials.map((testimonial, index) => (
           <CarouselItem key={index}>
@@ -80,7 +80,6 @@ const Testimonials = () => {
       <CarouselNext className="hidden lg:flex" />
       <CarouselPrevious className="hidden lg:flex" />
     </Carousel>
-
   );
 };
 

@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
 
-import Footer from "./Footer";
 import Navbar from "./navbar";
 
 const GlobalLayout = () => {
@@ -10,7 +9,6 @@ const GlobalLayout = () => {
       <div className="flex h-[calc(100vh-128px)] w-full items-center justify-center p-5">
         <Outlet />
       </div>
-      <Footer />
     </div>
   );
 };
