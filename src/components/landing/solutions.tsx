@@ -163,7 +163,7 @@ const Solutions = () => {
           Three Solutions, One Goal.
         </h1>
       </div>
-      <div className="flex items-start justify-start gap-6 overflow-x-auto border-b-2 text-center">
+      <div className="flex items-start justify-between gap-6 overflow-x-auto border-b-2 text-center">
         <div
           className={`flex shrink-0 cursor-pointer items-center justify-center gap-2 pb-2 lg:mx-20 ${
             activeSolution === "bulk" ? "border-b-[3px] border-black" : ""
