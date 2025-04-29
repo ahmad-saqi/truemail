@@ -55,9 +55,102 @@ const Solutions = () => {
           </div>
         );
       case "realTime":
-        return <p>Real-Time Email Verification Content</p>;
+        return (
+          <div className="grid lg:grid-cols-2">
+            <div className="flex flex-col items-start justify-start gap-4">
+              <h1 className="text-start text-5xl leading-[1.3]">
+                Real-Time Email Verification{" "}
+              </h1>
+              <p className="text-left text-3xl">
+                Instant Accuracy at Every Entry
+              </p>
+              <p className="text-left text-gray-500">
+                Validate emails the moment they are entered into your forms.
+                Instantly detect typos, fake emails, or disposable addresses ard
+                keep your list clean from the start.
+              </p>
+              <div className="flex gap-4">
+                <BadgeCheck className="fill-black text-white" />
+                <p className="text-gray-500">
+                  Integrate with your sign-up or lead capture forms.
+                </p>
+              </div>
+              <div className="flex gap-4">
+                <BadgeCheck className="fill-black text-white" />
+                <p className="text-gray-500">
+                  Instantly verify email addresses before submission.
+                </p>
+              </div>
+              <div className="flex gap-4">
+                <BadgeCheck className="fill-black text-white" />
+                <p className="text-gray-500">
+                  Block fake or invalid entries and improve lead quality.{" "}
+                </p>
+              </div>
+              <div className="flex gap-4">
+                <BadgeCheck className="fill-black text-white" />
+                <p className="text-gray-500">
+                  Boost your sender reputation and inbox delivery.
+                </p>
+              </div>
+              <button className="mt-6 flex gap-2 rounded-full bg-primary px-8 py-4 text-white">
+                Try it Free <ArrowRight />
+              </button>
+            </div>
+            <div className="flex justify-end">
+              <img src={SolutionImg} alt="" />
+            </div>
+          </div>
+        );
       case "auto":
-        return <p>Automated List Cleaning Content</p>;
+        return (
+          <div className="grid lg:grid-cols-2">
+            <div className="flex flex-col items-start justify-start gap-4">
+              <h1 className="text-start text-5xl leading-[1.3]">
+                Automated List Cleaning{" "}
+              </h1>
+              <p className="text-left text-3xl">
+                Keep Your List Clean Continuously{" "}
+              </p>
+              <p className="text-left text-gray-500">
+                Automatically detect invalid, dormant, and obsolete email
+                addresses in your list to unsustain its quality over time.
+                Schedule regular cleanings to ensure your database is always up
+                date.
+              </p>
+              <div className="flex gap-4">
+                <BadgeCheck className="fill-black text-white" />
+                <p className="text-gray-500">
+                  Set up automated list cleaning tasks with ease{" "}
+                </p>
+              </div>
+              <div className="flex gap-4">
+                <BadgeCheck className="fill-black text-white" />
+                <p className="text-gray-500">
+                  Detect invalid or problematic emails regularly{" "}
+                </p>
+              </div>
+              <div className="flex gap-4">
+                <BadgeCheck className="fill-black text-white" />
+                <p className="text-gray-500">
+                  Remove abandoned addresses from your list{" "}
+                </p>
+              </div>
+              <div className="flex gap-4">
+                <BadgeCheck className="fill-black text-white" />
+                <p className="text-gray-500">
+                  Reduce bounce rates and spam complaints{" "}
+                </p>
+              </div>
+              <button className="mt-6 flex gap-2 rounded-full bg-primary px-8 py-4 text-white">
+                Try it Free <ArrowRight />
+              </button>
+            </div>
+            <div className="flex justify-end">
+              <img src={SolutionImg} alt="" />
+            </div>
+          </div>
+        );
       default:
         return null;
     }
