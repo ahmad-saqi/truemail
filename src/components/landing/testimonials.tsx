@@ -45,7 +45,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <Carousel className="w-3/4">
+    <Carousel className="w-full lg:w-3/4 mx-auto">
       <CarouselContent>
         {testimonials.map((testimonial, index) => (
           <CarouselItem key={index}>
@@ -56,7 +56,7 @@ const Testimonials = () => {
                     {" "}
                     <img src={Comma} alt="" />
                   </div>
-                  <div className="mx-20">
+                  <div className="lg:mx-20">
                     <p className="text-sm text-gray-500">
                       {testimonial.topParagraph}
                     </p>
@@ -77,9 +77,10 @@ const Testimonials = () => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselNext />
-      <CarouselPrevious />
+      <CarouselNext className="hidden lg:flex" />
+      <CarouselPrevious className="hidden lg:flex" />
     </Carousel>
+
   );
 };
 

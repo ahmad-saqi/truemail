@@ -21,9 +21,8 @@ const hero = () => {
           </div>
           <div>
             <img src={Aerow} alt="" />
-            <div className="-rotate-12 pl-12">
-              <p className="font-gochi text-white">No credit</p>
-              <p className="font-gochi text-white">card required!</p>
+            <div className="-rotate-12 pl-12 pt-2">
+              <p className="font-gochi text-white text-center text-[16px] leading-[16px]">No credit <br/>card required!</p>
             </div>
           </div>
         </div>
