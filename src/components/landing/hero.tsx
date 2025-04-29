@@ -3,7 +3,10 @@ import HeroImg from "../../assets/img/hero.svg";
 
 const hero = () => {
   return (
-    <div className="mt-20 grid h-full min-h-screen w-full grid-cols-1 bg-[#0F162E] py-8 md:grid-cols-2 lg:px-10">
+    <div
+      id="home"
+      className="mt-20 grid h-full min-h-screen w-full grid-cols-1 bg-[#0F162E] py-8 md:grid-cols-2 lg:px-10"
+    >
       <div className="items center flex flex-col justify-center gap-8 px-4 lg:px-10">
         <h1 className="font-faktum text-3xl font-bold text-white md:text-6xl">
           The most accurate email verification tool

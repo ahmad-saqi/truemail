@@ -11,10 +11,18 @@ const LandingNavbar = () => {
 
       {/* Desktop Nav */}
       <div className="hidden gap-8 lg:flex">
-        <button className="text-white">Home</button>
-        <button className="text-white">Solution</button>
-        <button className="text-white">Pricing</button>
-        <button className="text-white">Company</button>
+        <a href="#home" className="text-white">
+          Home
+        </a>
+        <a href="#solution" className="text-white">
+          Solution
+        </a>
+        <a href="#pricing" className="text-white">
+          Pricing
+        </a>
+        <a href="#services" className="text-white">
+          Company
+        </a>
       </div>
 
       {/* Desktop Buttons */}

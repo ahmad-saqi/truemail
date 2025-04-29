@@ -157,7 +157,7 @@ const Solutions = () => {
   };
 
   return (
-    <div className="flex flex-col gap-6 px-4 py-20 lg:px-20">
+    <div id="solution" className="flex flex-col gap-6 px-4 py-20 lg:px-20">
       <div className="mb-8 flex w-full justify-center">
         <h1 className="text-xl font-extrabold lg:text-4xl">
           Three Solutions, One Goal.

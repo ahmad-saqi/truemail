@@ -9,7 +9,10 @@ import Service7 from "../../assets/img/service7.svg";
 
 const Services = () => {
   return (
-    <div className="flex w-full flex-col items-center justify-center gap-8 bg-primary px-4 py-4 lg:px-20 lg:py-12">
+    <div
+      id="services"
+      className="flex w-full flex-col items-center justify-center gap-8 bg-primary px-4 py-4 lg:px-20 lg:py-12"
+    >
       <p className="text-center text-white">
         The No. 1 email validation service for 400,000+ clients
       </p>
