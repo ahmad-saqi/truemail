@@ -74,13 +74,8 @@
   body {
     @apply bg-background text-foreground;
     font-family: "Faktum Test", "DM Sans", sans-serif;
-    
   }
   /* Hide scrollbar globally */
-
-
-
-
 }
 
 @font-face {

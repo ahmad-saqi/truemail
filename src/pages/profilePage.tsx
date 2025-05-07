@@ -1,17 +1,15 @@
-import Navbar from "../components/navbar"
-import ProfileForm from "../components/profileForm"
-
+import Navbar from "../components/navbar";
+import ProfileForm from "../components/profileForm";
 
 const ProfilePage = () => {
   return (
     <div>
-    <Navbar/>
-    <div className="bg-gray-100">
-    <ProfileForm/>
+      <Navbar />
+      <div className="bg-gray-100">
+        <ProfileForm />
+      </div>
     </div>
-    
-    </div>
-  )
-}
+  );
+};
 
-export default ProfilePage
+export default ProfilePage;

@@ -2,15 +2,20 @@ import success from "../assets/images/success.png";
 
 const SuccessModal = () => {
   return (
-    <div className="bg-black/60 h-screen flex justify-center items-center absolute inset-0">
-      <div className="bg-white rounded-4xl w-[30%] h-[40%] flex flex-col items-center justify-center">
-        <div className="bg-[#3D6BD8] rounded-full p-5">
+    <div className="absolute inset-0 flex h-screen items-center justify-center bg-black/60">
+      <div className="rounded-4xl flex h-[40%] w-[30%] flex-col items-center justify-center bg-white">
+        <div className="rounded-full bg-[#3D6BD8] p-5">
           <img src={success} alt="" />
         </div>
-        <p className="text-3xl mt-5 font-bold">Subscribed Successfully</p>
-        <p className="text-gray-400 mt-5"><span className="text-[#3D6BD8] font-medium">5000 Credit</span> added to your account</p>
+        <p className="mt-5 text-3xl font-bold">Subscribed Successfully</p>
+        <p className="mt-5 text-gray-400">
+          <span className="font-medium text-[#3D6BD8]">5000 Credit</span> added
+          to your account
+        </p>
         <p className="text-gray-400">you can start Validation Now!</p>
-        <button className="bg-[#3D6BD8] text-white rounded-full px-9 py-3 mt-5">OK</button>
+        <button className="mt-5 rounded-full bg-[#3D6BD8] px-9 py-3 text-white">
+          OK
+        </button>
       </div>
     </div>
   );

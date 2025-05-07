@@ -1,8 +1,9 @@
 import { useRef, useState } from "react";
+
 import uplaodeimage from "../assets/images/uplaodeimage.png";
 
 const UplodeTmage = () => {
-    const imageRef = useRef<HTMLInputElement>(null);
+  const imageRef = useRef<HTMLInputElement>(null);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -16,8 +17,8 @@ const UplodeTmage = () => {
     }
   };
   return (
-    <div className="flex items-center justify-center w-full mx-auto g-red-400">
-      <div className="flex flex-col items-center justify-center w-full border-2 border-dashed border-[#3D6BD8] cursor-pointer rounded-4xl mt-10 p-16">
+    <div className="g-red-400 mx-auto flex w-full items-center justify-center">
+      <div className="rounded-4xl mt-10 flex w-full cursor-pointer flex-col items-center justify-center border-2 border-dashed border-[#3D6BD8] p-16">
         <input
           type="file"
           accept="image/*"
@@ -25,22 +26,22 @@ const UplodeTmage = () => {
           className="hidden"
           id="image-upload"
         />
-        <label htmlFor="image-upload" className="cursor-pointer ">
+        <label htmlFor="image-upload" className="cursor-pointer">
           {imagePreview ? (
             <img
               src={imagePreview}
               alt="Preview"
-              className="max-h-48 rounded-lg "
+              className="max-h-48 rounded-lg"
             />
           ) : (
-            <div className="text-gray-500  rounded-md p-2 cursor-pointer">
-              <div className="flex items-center justify-center mb-5">
+            <div className="cursor-pointer rounded-md p-2 text-gray-500">
+              <div className="mb-5 flex items-center justify-center">
                 <img src={uplaodeimage} alt="" />
               </div>
               <div className="flex flex-col items-center">
-                <p className="text-xl text-[#3D6BD8]/70 font-semibold">
+                <p className="text-xl font-semibold text-[#3D6BD8]/70">
                   Drag and Drop anywhere on the page, or
-                  <span className="text-[#3D6BD8] text-xl ml-2 mr-2 font-semibold cursor-pointer">
+                  <span className="ml-2 mr-2 cursor-pointer text-xl font-semibold text-[#3D6BD8]">
                     click
                   </span>
                   to Upload files.

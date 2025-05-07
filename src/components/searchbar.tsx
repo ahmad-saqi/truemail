@@ -1,9 +1,11 @@
-import EmailForm from "./emailForm";
+import { useState } from "react";
+
 import { IoIosSend } from "react-icons/io";
 import { RiMailAddFill } from "react-icons/ri";
-import { useState } from "react";
-import UplodeTmage from "./upload-image";
+
+import EmailForm from "./emailForm";
 import ImageUplodeModal from "./imageUplodeModal";
+import UplodeTmage from "./upload-image";
 
 const Searchbar = () => {
   const [showEmailForm, setShowEmailForm] = useState(false);
@@ -21,7 +23,7 @@ const Searchbar = () => {
 
   return (
     <div
-      className={`w-full h-full min-h-screen flex flex-col items-start justify-start ${
+      className={`flex h-full min-h-screen w-full flex-col items-start justify-start ${
         showEmailForm ? "pt-20" : "pt-60"
       }`}
     >
@@ -30,23 +32,23 @@ const Searchbar = () => {
           e.preventDefault();
           handleVerifyClick();
         }}
-        className="w-1/2 mx-auto h-full p-5 flex flex-col items-center justify-center"
+        className="mx-auto flex h-full w-1/2 flex-col items-center justify-center p-5"
       >
-        <span className="w-full text-5xl font-bold text-center">
+        <span className="w-full text-center text-5xl font-bold">
           Test the Email Validator
         </span>
-        <div className="w-full rounded-full bg-gray-100 flex items-center justify-center p-2 mt-15 hover:shadow-lg transition-shadow duration-500 ">
+        <div className="mt-15 flex w-full items-center justify-center rounded-full bg-gray-100 p-2 transition-shadow duration-500 hover:shadow-lg">
           <input
             type="email"
             placeholder="Enter your email"
-            className="flex-1 h-full justify-center items-center flex focus-visible:outline-none px-4"
+            className="flex h-full flex-1 items-center justify-center px-4 focus-visible:outline-none"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <div className="flex gap-2">
             <button
               type="submit"
-              className={`cursor-pointer rounded-2xl p-2 px-8 flex justify-center items-center gap-2 ${
+              className={`flex cursor-pointer items-center justify-center gap-2 rounded-2xl p-2 px-8 ${
                 isValidEmail(email)
                   ? "bg-[#3D6BD8] text-white"
                   : "bg-gray-200 text-[#3D6BD8]"
@@ -55,23 +57,23 @@ const Searchbar = () => {
               <p>Verify</p>
               <IoIosSend className="size-6" />
             </button>
-            <button className="cursor-pointer bg-gray-200 rounded-2xl p-2 px-8 flex justify-center items-center gap-2 text-[#3D6BD8]">
+            <button className="flex cursor-pointer items-center justify-center gap-2 rounded-2xl bg-gray-200 p-2 px-8 text-[#3D6BD8]">
               <RiMailAddFill className="size-5" />
               <p>Bulk</p>
             </button>
           </div>
         </div>
       </form>
-      <fieldset className="flex w-1/5 mx-auto border-t border-gray-300 text-center mt-10">
+      <fieldset className="mx-auto mt-10 flex w-1/5 border-t border-gray-300 text-center">
         <legend className="px-5">Or</legend>
       </fieldset>
 
-      <div className=" flex justify-center items-center rounded-full w-1/2 mx-auto p-6">
+      <div className="mx-auto flex w-1/2 items-center justify-center rounded-full p-6">
         <UplodeTmage />
       </div>
 
       {showEmailForm ? <EmailForm /> : null}
-      <ImageUplodeModal/>
+      <ImageUplodeModal />
     </div>
   );
 };

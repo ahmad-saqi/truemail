@@ -1,33 +1,35 @@
-import { FcGoogle } from "react-icons/fc";
-import { FaLinkedin } from "react-icons/fa";
-import { IoMailUnreadOutline } from "react-icons/io5";
-import { AiTwotoneLock } from "react-icons/ai";
-import { RiEyeLine } from "react-icons/ri";
-import Imagecomp from "../components/imagecomp";
-import bgimage from "../assets/images/bgimage.png";
-import logo from "../assets/images/Truemaillogo.png";
 import { useState } from "react";
+
+import { AiTwotoneLock } from "react-icons/ai";
+import { FaLinkedin } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
+import { IoMailUnreadOutline } from "react-icons/io5";
+import { RiEyeLine } from "react-icons/ri";
 import { RiEyeOffLine } from "react-icons/ri";
-import { z } from "zod";
 import { Link, useNavigate } from "react-router-dom";
+import { z } from "zod";
+
+import logo from "../assets/img/Truemaillogo.png";
+import bgimage from "../assets/img/bgimage.png";
+import Imagecomp from "../components/imagecomp";
 
 const SignupPage = () => {
   const navigate = useNavigate();
   const [eye, setEye] = useState(true);
   const [password, setPassword] = useState("");
-  const [username, setUsername] = useState("");
+  const [username] = useState("");
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
 
-  const usernameSchema = z
-    .string()
-    .min(1, "name is required")
-    .regex(/^[a-zA-Z]/, "name start with letter")
-    .regex(
-      /^[a-zA-Z0-9_@.-]+$/,
-      "name can contain letters, numbers, and symbols."
-    );
+  // const usernameSchema = z
+  //   .string()
+  //   .min(1, "name is required")
+  //   .regex(/^[a-zA-Z]/, "name start with letter")
+  //   .regex(
+  //     /^[a-zA-Z0-9_@.-]+$/,
+  //     "name can contain letters, numbers, and symbols."
+  //   );
 
   const emailSchema = z
     .string()
@@ -51,14 +53,14 @@ const SignupPage = () => {
       ),
   });
 
-  const validateUsername = () => {
-    try {
-      usernameSchema.parse(username);
-      return true;
-    } catch {
-      return false;
-    }
-  };
+  // const validateUsername = () => {
+  //   try {
+  //     usernameSchema.parse(username);
+  //     return true;
+  //   } catch {
+  //     return false;
+  //   }
+  // };
 
   const validateEmail = () => {
     try {
@@ -82,7 +84,7 @@ const SignupPage = () => {
     // Reset error messages
     setEmailError("");
     setPasswordError("");
-    
+
     // Check if fields are empty
     if (!email) {
       setEmailError("Email is required");
@@ -93,122 +95,122 @@ const SignupPage = () => {
 
     // Only proceed if both fields are filled and valid
     if (email && password && validateEmail() && validatePassword()) {
-      navigate('/');
+      navigate("/");
     }
   };
 
   return (
-    <div className="w-full h-screen grid grid-cols-1 lg:grid-cols-2">
-      <div className="bg-white flex justify-center items-center">
-        <div className="flex flex-col justify-center items-center p-10 w-full">
+    <div className="grid h-screen w-full grid-cols-1 lg:grid-cols-2">
+      <div className="flex items-center justify-center bg-white">
+        <div className="flex w-full flex-col items-center justify-center p-10">
           <img src={logo} alt="" />
-          <div className="flex flex-col justify-center items-center mt-7">
+          <div className="mt-7 flex flex-col items-center justify-center">
             <p className="text-2xl font-bold">LOGIN</p>
-            <p className="text-sm mt-3">
+            <p className="mt-3 text-sm">
               Please enter your informaton to access you'r account
             </p>
           </div>
-          <div className="flex flex-col items-center w-full lg:w-[50%] gap-4 mt-6">
-            <div className="flex md:flex-col gap-4 w-full md:w-1/2 lg:w-full">
-              <button className="flex gap-3 justify-center cursor-pointer items-center hover:shadow-lg transition-shadow duration-500 w-full border border-gray-200 rounded-3xl p-2 md:p-3">
+          <div className="mt-6 flex w-full flex-col items-center gap-4 lg:w-[50%]">
+            <div className="flex w-full gap-4 md:w-1/2 md:flex-col lg:w-full">
+              <button className="flex w-full cursor-pointer items-center justify-center gap-3 rounded-3xl border border-gray-200 p-2 transition-shadow duration-500 hover:shadow-lg md:p-3">
                 <FcGoogle className="size-6" />
-                <p className="hidden md:block text-md">
+                <p className="text-md hidden md:block">
                   Login with <span className="font-bold">Google</span>
                 </p>
               </button>
-              <button className="flex gap-4 justify-center cursor-pointer items-center w-full border border-gray-200 hover:shadow-lg transition-shadow duration-500 rounded-3xl p-2 md:p-3">
-                <FaLinkedin className="fill-blue-600 size-6" />
-                <p className="hidden md:block text-lg">
+              <button className="flex w-full cursor-pointer items-center justify-center gap-4 rounded-3xl border border-gray-200 p-2 transition-shadow duration-500 hover:shadow-lg md:p-3">
+                <FaLinkedin className="size-6 fill-blue-600" />
+                <p className="hidden text-lg md:block">
                   Login with <span className="font-bold">Linkedin</span>
                 </p>
               </button>
             </div>
-            <div className="flex flex-col gap-4">
-            <fieldset className="w-full border-t mt-2 border-gray-300 text-center">
-              <legend className="px-2 text-[15px]">
-                <span className="font-bold">Login</span> with Others
-              </legend>
-            </fieldset>
+            <div className="flex w-full flex-col gap-4">
+              <fieldset className="mt-2 w-full border-t border-gray-300 text-center">
+                <legend className="px-2 text-[15px]">
+                  <span className="font-bold">Login</span> with Others
+                </legend>
+              </fieldset>
 
-            <div className="bg-[#F0EDFFCC] w-full h-full flex  items-center gap-2 rounded-3xl p-3  hover:shadow-md duration-500 transition-shadow ">
-              <IoMailUnreadOutline className="size-6 ml-2" />
-              <input
-                type="email"
-                placeholder="Enter Email"
-                className="outline-none w-full mr-3"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
-            {emailError && (
-              <p className="text-red-500 text-sm">{emailError}</p>
-            )}
-            {email && !validateEmail() && (
-              <p className="text-red-500 text-sm">
-                Please enter a valid email address
-              </p>
-            )}
-            <div className="bg-[#F0EDFFCC] w-full h-full flex  items-center gap-2 rounded-3xl p-3  hover:shadow-md duration-500 transition-shadow ">
-              <AiTwotoneLock className="size-6 ml-2" />
-              <div className="flex items-center w-full">
+              <div className="flex h-full w-full items-center gap-2 rounded-3xl bg-[#F0EDFFCC] p-3 transition-shadow duration-500 hover:shadow-md">
+                <IoMailUnreadOutline className="ml-2 size-6" />
                 <input
-                  type={eye ? "password" : "text"}
-                  placeholder="Enter Password"
-                  className="outline-none w-full"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  type="email"
+                  placeholder="Enter Email"
+                  className="mr-3 w-full outline-none bg-transparent"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   required
                 />
+              </div>
+              {emailError && (
+                <p className="text-sm text-red-500">{emailError}</p>
+              )}
+              {email && !validateEmail() && (
+                <p className="text-sm text-red-500">
+                  Please enter a valid email address
+                </p>
+              )}
+              <div className="flex h-full w-full items-center gap-2 rounded-3xl bg-[#F0EDFFCC] p-3 transition-shadow duration-500 hover:shadow-md">
+                <AiTwotoneLock className="ml-2 size-6" />
+                <div className="flex w-full items-center">
+                  <input
+                    type={eye ? "password" : "text"}
+                    placeholder="Enter Password"
+                    className="w-full outline-none bg-transparent"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                  />
 
-                <div onClick={() => setEye(!eye)}>
-                  {eye ? (
-                    <RiEyeLine className="mr-2 ml-2 text-2xl" />
-                  ) : (
-                    <RiEyeOffLine className="mr-2 ml-2 text-2xl" />
-                  )}
+                  <div onClick={() => setEye(!eye)}>
+                    {eye ? (
+                      <RiEyeLine className="ml-2 mr-2 text-2xl" />
+                    ) : (
+                      <RiEyeOffLine className="ml-2 mr-2 text-2xl" />
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
-            {passwordError && (
-              <p className="text-red-500 text-sm">{passwordError}</p>
-            )}
-            <div className="flex justify-end items-end">
-              <a
-                href="#"
-                className="text-blue-400 ml-40 md:ml-70 font-semibold"
-              >
-                Forgot Password?
-              </a>
-            </div>
-            <div className="flex justify-center items-center w-full ">
-              <Link 
-                to="/"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleLogin();
-                }}
-                className="mt-5 text-white text-center bg-[#0F162E] w-full rounded-4xl p-2 cursor-pointer hover:shadow-lg transition-shadow duration-500 px-5 md:px-10"
-              >
-                Login
-              </Link>
+              {passwordError && (
+                <p className="text-sm text-red-500">{passwordError}</p>
+              )}
+              <div className="flex items-end justify-end">
+                <a
+                  href="#"
+                  className="md:ml-70 ml-40 font-semibold text-blue-400"
+                >
+                  Forgot Password?
+                </a>
+              </div>
+              <div className="flex w-full items-center justify-center">
+                <Link
+                  to="/"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleLogin();
+                  }}
+                  className="rounded-full mt-5 w-full cursor-pointer bg-[#0F162E] p-4 px-5 text-center text-white transition-shadow duration-500 hover:shadow-lg md:px-10"
+                >
+                  Login
+                </Link>
+              </div>
             </div>
           </div>
-            </div>
 
           <div className="mt-10">
             <p>
               Already have an account?
-              <Link to="/signup" className="text-blue-500 font-bold ml-1">
+              <Link to="/signup" className="ml-1 font-bold text-blue-500">
                 Sign Up
               </Link>
             </p>
           </div>
         </div>
       </div>
-      <div className="hidden lg:block relative">
-        <img src={bgimage} alt="" className="w-full h-screen object-cover " />
-        <div className="absolute inset-0 flex justify-center items-center ">
+      <div className="relative hidden lg:block">
+        <img src={bgimage} alt="" className="h-screen w-full object-cover" />
+        <div className="absolute inset-0 flex items-center justify-center">
           <Imagecomp />
         </div>
       </div>
