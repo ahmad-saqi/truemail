@@ -1,4 +1,4 @@
-import Atm from "../assets/images/card-pos.png";
+import Atm from "../assets/img/card-pos.png";
 import Invoice from "../components/invoice";
 import Navbar from "../components/navbar";
 import Payment from "../components/payment";

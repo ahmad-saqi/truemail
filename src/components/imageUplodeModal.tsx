@@ -1,9 +1,9 @@
 import { FaFolderClosed } from "react-icons/fa6";
 
-import box from "../assets/images/Drepbox.png";
-import aws from "../assets/images/aws.png";
-import google from "../assets/images/googel.png";
-import oneDrivex from "../assets/images/oneDrive.png";
+import box from "../assets/img/Drepbox.png";
+import aws from "../assets/img/aws.png";
+import google from "../assets/img/googel.png";
+import oneDrivex from "../assets/img/oneDrive.png";
 import UplodeTmage from "./upload-image";
 
 const ImageUplodeModal = () => {

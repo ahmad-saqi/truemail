@@ -1,34 +1,128 @@
-import { useKindeAuth } from "@kinde-oss/kinde-auth-react";
+import { MdHelp } from "react-icons/md";
+import girl from "../assets/img/Elipse 5.png"
+import { CiLogout } from "react-icons/ci";;
+import { BsPersonFill } from "react-icons/bs";
+import { IoMailUnread } from "react-icons/io5"
+import logo from "../assets/img/navlogo.png";
+import credits from "../assets/img/image.png";
+import Atm from "../assets/img/card-pos.png";
+// import { GiHamburgerMenu } from "react-icons/gi";
+import IconData from "../assets/img/icondata.svg";
+import profile from "../assets/img/Elipse 5.png";
+import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import IconAccount from "../assets/img/iconaccount.svg";
 
-import MaxWidthWrapper from "./max-width-wrapper";
-import { ModeToggle } from "./mode-toggle";
-import { Button } from "./ui/button";
+const menuItems = [
+  { label: "Bulk" },
+  { label: "Single" },
+  { label: "Deliverability" },
+];
+
+const MenuItem = ({ label }: { label: string }) => (
+  <div className="flex items-center gap-2">
+    <div className="bg-white rounded-full p-2 text-blue-500">
+      <IoMailUnread className="size-6" />
+    </div>
+    <p className="text-lg font-semibold">{label}</p>
+  </div>
+);
 
 const Navbar = () => {
-  const { logout } = useKindeAuth();
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Close dropdown if clicked outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
-    <div className="sticky inset-x-0 top-0 z-40 h-16 w-full border-b bg-background transition-all">
-      <MaxWidthWrapper>
-        <div className="flex h-16 items-center justify-between">
-          <Link to="/" className="z-40 flex font-semibold">
-            React<span className="text-primary">Lab</span>
-          </Link>
-          <div className="flex h-full items-center space-x-4">
-            <Button
-              type="button"
-              variant="outline"
-              size="default"
-              onClick={() => logout()}
+    <header className="bg-[#F5F6F8CC] border-b fixed w-full border-gray-200 h-20 px-10">
+      <div className="flex justify-between items-center h-full">
+        {/* Logo */}
+        <img src={logo} alt="Navigation Logo" />
+
+        {/* Menu Items */}
+        <nav className="flex flex-col md:flex-row items-center gap-8 ml-20 cursor-pointer">
+          {menuItems.map((item) => (
+            <MenuItem key={item.label} label={item.label} />
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-8">
+          <div className="flex items-center gap-4 ml-10">
+            <p className="text-lg border-b border-black">Buy Credits</p>
+            <div className="flex items-center gap-2">
+              <img src={credits} alt="Credits Icon" />
+              <p>100 Credit</p>
+            </div>
+          </div>
+
+          {/* Profile Dropdown */}
+          <div className="relative inline-block text-left" ref={dropdownRef}>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="bg-white rounded-full p-2 px-6 flex items-center gap-3 cursor-pointer"
             >
-              Logout
-            </Button>
-            <ModeToggle />
+              <p>Wahiba Batool</p>
+              <img src={profile} alt="User Profile" className="size-8 rounded-full" />
+            </button>
+
+            {isOpen && (
+              <div className="absolute right-0 mt-4 mr-3 w-[220px] bg-white border border-gray-200 rounded-l-2xl rounded-b-2xl shadow-lg z-50 px-3">
+                <Link to="/profile"   className=" flex gap-3 justify-center items-center mt-3" >
+                  <img src={girl} alt="" className="h-13 w-13 rounded-full"/>
+                  <p className="font">Wahiba Batool</p>
+                </Link>
+                <div className="px-5 flex flex-col gap-3 justify-start  mt-3 border-b-2 border-gray-200 ">
+                  <p className="text-gray-500">CREDIT BALANCE</p>
+                  <p className="text-2xl font-bold mb-5">250</p>
+                </div>
+                <ul className="py-1 text-sm text-gray-700">
+                  <div className="flex justify-start items-center gap-2 px-4 py-2 hover:bg-gray-100 rounded-md">
+                    <BsPersonFill className="size-5 text-black"/>
+                    <li><a href="/profile" className=" text-lg text-black">Profile</a></li>
+                  </div>
+                  <div className="flex justify-start items-center gap-2 px-4 py-2 hover:bg-gray-100 rounded-md">
+                  <img src={IconAccount} className="size-5 text-black"/>
+                    <li><a href="#" className=" text-lg text-black">Account</a></li>
+                  </div>
+                  <div className="flex justify-start items-center gap-2 px-4 py-2 hover:bg-gray-100 rounded-md">
+                  <img src={IconData} className="size-5 text-black"/>
+                    <li><a href="#" className=" text-lg text-black">Integration</a></li>
+                  </div>
+                  <Link to="/billing" className="flex justify-start items-center gap-2 px-4 py-2 hover:bg-gray-100 rounded-md">
+                  <img src={Atm} className="size-5 text-black"/>
+                    <li><a href="#" className=" text-lg text-black">Billing</a></li>
+                  </Link>
+                  <div className="flex justify-start items-center gap-2 px-4 py-2 hover:bg-gray-100 rounded-md">
+                    <MdHelp className="size-5 text-black"/>
+                    <li><a href="#" className=" text-lg text-black">Help</a></li>
+                  </div>
+                  <div className="flex justify-start items-center gap-2 px-4 py-2 hover:bg-gray-100 rounded-b-2xl">
+                    <CiLogout className="size-5 text-black"/>
+                    <li><a href="#" className=" text-lg text-black">Sign Out</a></li>
+                  </div>
+                </ul>
+              </div>
+            )}
           </div>
         </div>
-      </MaxWidthWrapper>
-    </div>
+      </div>
+    </header>
   );
 };
 

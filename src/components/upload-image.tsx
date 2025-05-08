@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 
-import uplaodeimage from "../assets/images/uplaodeimage.png";
+import uplaodeimage from "../assets/img/uplaodeimage.png";
 
 const UplodeTmage = () => {
   const imageRef = useRef<HTMLInputElement>(null);
