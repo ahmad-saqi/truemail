@@ -34,7 +34,7 @@ const TestEmail = () => {
             name=""
             id=""
             placeholder="email@example.com"
-            className="w-full rounded-full bg-white px-6 py-2 placeholder:text-xs hover:drop-shadow-lg duration-300"
+            className="w-full rounded-full bg-white px-6 py-2 placeholder:text-xs hover:drop-shadow-lg duration-300 border  focus:border-primary focus:outline-none focus:ring-0"
           />
           <button className="rounded-full bg-primary px-8 py-2 text-xs text-white hover:bg-gray-100 border border-primary hover:text-primary">
             Verify

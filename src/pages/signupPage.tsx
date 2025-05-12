@@ -164,12 +164,12 @@ const SignupPage = () => {
                 </legend>
               </fieldset>
 
-              <div className="flex h-full w-full items-center gap-2 rounded-3xl bg-[#F0EDFFCC] p-3 transition-shadow duration-500 hover:shadow-md">
+              <div className="flex h-full w-full items-center gap-2  rounded-3xl bg-[#F0EDFFCC] p-3 transition-shadow duration-500 hover:shadow-md">
                 <BsPerson className="ml-2 size-6" />
                 <input
                   type="text"
                   placeholder="Enter Full Name"
-                  className="mr-3 w-full outline-none"
+                  className="mr-3 w-full outline-none bg-[#F0EDFFCC] "
                   value={username}
                   onChange={(e) => {
                     setUsername(e.target.value);
@@ -182,12 +182,12 @@ const SignupPage = () => {
                 <p className="text-sm text-red-500">{usernameError}</p>
               )}
 
-              <div className="flex h-full w-full items-center gap-2 rounded-3xl bg-[#F0EDFFCC] p-3 transition-shadow duration-500 hover:shadow-md">
+              <div className="flex h-full w-full items-center gap-2  rounded-3xl bg-[#F0EDFFCC] p-3 transition-shadow duration-500 hover:shadow-md">
                 <IoMailUnreadOutline className="ml-2 size-6" />
                 <input
                   type="email"
                   placeholder="Enter Email"
-                  className="mr-3 w-full outline-none"
+                  className="mr-3 w-full outline-none bg-[#F0EDFFCC] "
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);
@@ -200,13 +200,13 @@ const SignupPage = () => {
                 <p className="text-sm text-red-500">{emailError}</p>
               )}
 
-              <div className="flex h-full w-full items-center gap-2 rounded-3xl bg-[#F0EDFFCC] p-3 transition-shadow duration-500 hover:shadow-md">
+              <div className="flex h-full w-full items-center gap-2  rounded-3xl bg-[#F0EDFFCC] p-3 transition-shadow duration-500 hover:shadow-md">
                 <AiTwotoneLock className="ml-2 size-6" />
                 <div className="flex w-full items-center">
                   <input
                     type={eye ? "password" : "text"}
                     placeholder="Enter Password"
-                    className="w-full outline-none"
+                    className="w-full outline-none bg-[#F0EDFFCC] "
                     value={password}
                     onChange={(e) => {
                       setPassword(e.target.value);
