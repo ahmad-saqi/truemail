@@ -5,25 +5,25 @@ const hero = () => {
   return (
     <div
       id="home"
-      className="mt-20 grid h-full min-h-screen w-full grid-cols-1 bg-[#0F162E] py-8 md:grid-cols-2 lg:px-10"
+    className="mt-20 grid h-full lg:min-h-screen w-full grid-cols-1 bg-[#0F162E] py-10 md:grid-cols-2 lg:px-10 "
     >
       <div className="items center flex flex-col justify-center gap-8 px-4 lg:px-10">
-        <h1 className="font-faktum text-3xl font-bold text-white md:text-6xl">
+        <h1 className="font-faktum text-3xl font-bold text-white md:text-6xl md:text-md">
           The most accurate email verification tool
         </h1>
-        <p className="text-sx text-gray-300 lg:text-xl">
+        <p className="text-sx text-gray-300  lg:text-xl">
           Improve deliverability, stop list decay, and remove bounces by
           verifying your emails. Simply upload a list, and export.
         </p>
         <div className="flex gap-2">
           <div className="flex flex-col gap-4">
-            <button className="w-fit rounded-full bg-primary px-6 py-3 text-xs font-light text-white lg:px-6">
+            <button className="w-fit rounded-full bg-primary px-6 py-3 font-light text-white lg:px-6 hover:bg-[#19223F] hover:text-primary border border-primary">
               Get Started Free
             </button>
             <p className="text-xs text-white">Includes 250 free credits</p>
           </div>
           <div>
-            <img src={Aerow} alt="" />
+            <img src={Aerow} alt="" className="hover:scale-105 duration-300"/>
             <div className="-rotate-12 pl-12 pt-2">
               <p className="text-center font-gochi text-[16px] leading-[16px] text-white">
                 No credit <br />
@@ -33,8 +33,8 @@ const hero = () => {
           </div>
         </div>
       </div>
-      <div className="">
-        <img src={HeroImg} alt="" className="" />
+      <div className="flex items-center justify-center md:mb-20 mt-10 md:mt-0">
+        <img src={HeroImg} alt="" className="hover:scale-105 duration-300" />
       </div>
     </div>
   );
