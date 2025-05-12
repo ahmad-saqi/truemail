@@ -1,3 +1,4 @@
+import Marquee from "react-fast-marquee";
 import Line from "../../assets/img/pricing.svg";
 import Service1 from "../../assets/img/service1.svg";
 import Service2 from "../../assets/img/service2.svg";
@@ -16,6 +17,7 @@ const Services = () => {
       <p className="text-center text-white">
         The No. 1 email validation service for 400,000+ clients
       </p>
+      <Marquee autoFill pauseOnHover>
       <div className="flex w-full items-center justify-between">
         <img src={Service1} alt="" className="size-10 lg:size-32" />
         <img src={Line} alt="" className="size-10" />
@@ -31,6 +33,7 @@ const Services = () => {
         <img src={Line} alt="" className="size-10" />
         <img src={Service7} alt="" className="size-10 lg:size-32" />
       </div>
+      </Marquee>
     </div>
   );
 };
