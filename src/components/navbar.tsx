@@ -1,5 +1,5 @@
 import { MdHelp } from "react-icons/md";
-import girl from "../assets/img/Elipse 5.png"
+import girl from "../assets/img/asim.png"
 import { CiLogout } from "react-icons/ci";;
 import { BsPersonFill } from "react-icons/bs";
 import { IoMailUnread } from "react-icons/io5"
@@ -8,7 +8,7 @@ import credits from "../assets/img/image.png";
 import Atm from "../assets/img/card-pos.png";
 // import { GiHamburgerMenu } from "react-icons/gi";
 import IconData from "../assets/img/icondata.svg";
-import profile from "../assets/img/Elipse 5.png";
+import profile from "../assets/img/asim.png";
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import IconAccount from "../assets/img/iconaccount.svg";
@@ -77,15 +77,15 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="bg-white rounded-full p-2 px-6 flex items-center gap-3 cursor-pointer"
             >
-              <p>Wahiba Batool</p>
+              <p>Rehan Siddique</p>
               <img src={profile} alt="User Profile" className="size-8 rounded-full" />
             </button>
 
             {isOpen && (
               <div className="absolute right-0 mt-4 mr-3 w-[220px] bg-white border border-gray-200 rounded-l-2xl rounded-b-2xl shadow-lg z-50 px-3">
                 <Link to="/profile"   className=" flex gap-3 justify-center items-center mt-3" >
-                  <img src={girl} alt="" className="h-13 w-13 rounded-full"/>
-                  <p className="font">Wahiba Batool</p>
+                  <img src={girl} alt="" className="h-10 w-10 rounded-full"/>
+                  <p className="font">Rehan Siddique</p>
                 </Link>
                 <div className="px-5 flex flex-col gap-3 justify-start  mt-3 border-b-2 border-gray-200 ">
                   <p className="text-gray-500">CREDIT BALANCE</p>

@@ -9,6 +9,8 @@ import {
 } from "lucide-react";
 
 import SolutionImg from "../../assets/img/solutionimg.svg";
+import RealTime from "../../assets/img/realtime.png";
+import AutoSolution from "../../assets/img/autosolution.png";
 
 const Solutions = () => {
   const [activeSolution, setActiveSolution] = useState<
@@ -21,7 +23,7 @@ const Solutions = () => {
         return (
           <div className="grid lg:grid-cols-2">
             <div className="flex flex-col items-start justify-start gap-4">
-              <h1 className="text-start text-5xl leading-[1.3]">
+              <h1 className="text-start text-5xl leading-[1] md:leading-[1.3]">
                 Clean Your Email List in 3 Easy Steps
               </h1>
               <p className="text-left text-gray-500">
@@ -45,12 +47,12 @@ const Solutions = () => {
                   Deliver up to 99.9% of your emails with confidence.
                 </p>
               </div>
-              <button className="mt-6 flex gap-2 rounded-full bg-primary px-8 py-4 text-white">
+              <button className="mt-6 flex gap-2 rounded-full bg-primary hover:bg-primary/80 px-6 py-3 text-white">
                 Try it Free <ArrowRight />
               </button>
             </div>
-            <div className="flex justify-end">
-              <img src={SolutionImg} alt="" />
+            <div className="flex justify-end mt-5 lg:mt-0">
+              <img src={SolutionImg} alt="" className="hover:scale-105 duration-300" />
             </div>
           </div>
         );
@@ -58,7 +60,7 @@ const Solutions = () => {
         return (
           <div className="grid lg:grid-cols-2">
             <div className="flex flex-col items-start justify-start gap-4">
-              <h1 className="text-start text-5xl leading-[1.3]">
+              <h1 className="text-start text-5xl leading-[1] md:leading-[1.3]">
                 Real-Time Email Verification{" "}
               </h1>
               <p className="text-left text-3xl">
@@ -93,12 +95,12 @@ const Solutions = () => {
                   Boost your sender reputation and inbox delivery.
                 </p>
               </div>
-              <button className="mt-6 flex gap-2 rounded-full bg-primary px-8 py-4 text-white">
+              <button className="mt-6 flex gap-2 rounded-full bg-primary hover:bg-primary/80 px-6 py-3 text-white ">
                 Try it Free <ArrowRight />
               </button>
             </div>
-            <div className="flex justify-end">
-              <img src={SolutionImg} alt="" />
+            <div className="flex justify-end mt-5 lg:mt-0">
+              <img src={RealTime} alt=""  className="hover:scale-105 duration-300"/>
             </div>
           </div>
         );
@@ -106,7 +108,7 @@ const Solutions = () => {
         return (
           <div className="grid lg:grid-cols-2">
             <div className="flex flex-col items-start justify-start gap-4">
-              <h1 className="text-start text-5xl leading-[1.3]">
+              <h1 className="text-start text-5xl leading-[1] md:leading-[1.3]">
                 Automated List Cleaning{" "}
               </h1>
               <p className="text-left text-3xl">
@@ -142,12 +144,12 @@ const Solutions = () => {
                   Reduce bounce rates and spam complaints{" "}
                 </p>
               </div>
-              <button className="mt-6 flex gap-2 rounded-full bg-primary px-8 py-4 text-white">
+              <button className="mt-6 flex gap-2 rounded-full bg-primary hover:bg-primary/80 px-6 py-3 text-white">
                 Try it Free <ArrowRight />
               </button>
             </div>
-            <div className="flex justify-end">
-              <img src={SolutionImg} alt="" />
+            <div className="flex justify-end mt-5 lg:mt-0">
+              <img src={AutoSolution} alt="" className="hover:scale-105 duration-300" />
             </div>
           </div>
         );
@@ -165,7 +167,7 @@ const Solutions = () => {
       </div>
       <div className="flex items-start justify-between gap-6 overflow-x-auto border-b-2 text-center">
         <div
-          className={`flex shrink-0 cursor-pointer items-center justify-center gap-2 pb-2 lg:mx-20 ${
+          className={`flex shrink-0 cursor-pointer items-center justify-center gap-2 pb-2 mx-20 ${
             activeSolution === "bulk" ? "border-b-[3px] border-black" : ""
           }`}
           onClick={() => setActiveSolution("bulk")}
@@ -174,7 +176,7 @@ const Solutions = () => {
           <p>Bulk Email List Cleaning</p>
         </div>
         <div
-          className={`flex shrink-0 cursor-pointer items-center justify-center gap-2 pb-2 lg:mx-20 ${
+          className={`flex shrink-0 cursor-pointer items-center justify-center gap-2 pb-2 mx-20 ${
             activeSolution === "realTime" ? "border-b-[3px] border-black" : ""
           }`}
           onClick={() => setActiveSolution("realTime")}
@@ -183,7 +185,7 @@ const Solutions = () => {
           <p>Real-Time Email Verification</p>
         </div>
         <div
-          className={`flex shrink-0 cursor-pointer items-center justify-center gap-2 pb-2 lg:mx-20 ${
+          className={`flex shrink-0 cursor-pointer items-center justify-center gap-2 pb-2 mx-20 ${
             activeSolution === "auto" ? "border-b-[3px] border-black" : ""
           }`}
           onClick={() => setActiveSolution("auto")}

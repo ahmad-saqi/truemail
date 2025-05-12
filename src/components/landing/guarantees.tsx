@@ -11,7 +11,7 @@ const Guarantees = () => {
         We are committed to providing the fastest and most accurate email
         verification tool
       </p>
-      <div className="grid w-full grid-cols-2 items-center justify-between gap-16 lg:grid-cols-4">
+      <div className="grid w-full grid-cols-2 items-center justify-between gap-3 lg:gap-16 lg:grid-cols-4">
         <div className="flex flex-col items-center justify-center gap-2">
           <img src={G1} alt="" className="size-10" />
           <h1 className="text-center text-2xl font-bold">99%</h1>

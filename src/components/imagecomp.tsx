@@ -3,7 +3,7 @@ import image from "../assets/img/women with tab 1.png";
 
 const Imagecomp = () => {
   return (
-    <div className="rounded-4xl rel hidden border-2 border-white/50 bg-white/25 pl-10 pr-6 pt-6 backdrop-blur-md md:h-[60.5%] md:w-[50%] lg:block xl:h-[78.5%] xl:w-[70%]">
+    <div className="rounded-4xl rel hidden border-2 rounded-3xl border-white/50 bg-white/25 pl-10 pr-6 pt-6 backdrop-blur-md md:h-[60.5%] md:w-[50%] lg:block xl:h-[78.5%] xl:w-[70%]">
       <div className="relative flex gap-4">
         <p className="w-[60%] text-2xl font-bold text-white lg:text-6xl">
           Very good works are waiting for you Login Now!!!

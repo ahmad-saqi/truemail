@@ -1,8 +1,45 @@
+import { useState } from "react";
+
 import { BadgeCheck } from "lucide-react";
 
+import Image5000 from "../../assets/img/Frame.png";
 import Line from "../../assets/img/pricing.svg";
 
+// update path if needed
+
+const pricingData = [
+  {
+    id: 1,
+    price: "$18",
+    credits: "2,000",
+    costPerCredit: "$0.009",
+  },
+  {
+    id: 2,
+    price: "$38",
+    credits: "5,000",
+    costPerCredit: "$0.0076",
+    image: Image5000, // only this option has an image
+  },
+  {
+    id: 3,
+    price: "$75",
+    credits: "10,000",
+    costPerCredit: "$0.0075",
+  },
+  {
+    id: 4,
+    price: "$175",
+    credits: "25,000",
+    costPerCredit: "$0.007",
+  },
+];
+
 const Pricing = () => {
+  const [pricing, setPricing] = useState(pricingData[0]);
+
+  const isActive = (id: number) => pricing.id === id;
+
   return (
     <div
       id="pricing"
@@ -14,44 +51,57 @@ const Pricing = () => {
       </p>
       <p className="text-primary">Pay-As-You-Go</p>
       <div className="mt-5 grid w-full lg:grid-cols-2">
+        {/* Left Pricing Options */}
         <div className="mx-5 space-y-2 rounded-[40px] bg-white p-10 lg:mx-0 lg:mt-10 lg:rounded-none lg:rounded-l-[40px]">
           <h1 className="text-center text-3xl font-bold">
             How many emails do you have?
           </h1>
           <p className="w-full rounded-full bg-gray-100 py-2 text-center">
-            5,000
+            {pricing.credits}
           </p>
           <p className="w-full py-2 text-center">or, select an amount</p>
-          <p className="w-full rounded-full bg-gray-100 py-2 text-center font-bold">
-            2,000 <span className="text-xs font-light">credits for</span> $18
-          </p>
-          <p className="w-full rounded-full bg-gray-100 py-2 text-center font-bold">
-            5,000 <span className="text-xs font-light">credits for</span> $38
-          </p>
-          <p className="w-full rounded-full bg-gray-100 py-2 text-center font-bold">
-            10,000 <span className="text-xs font-light">credits for</span> $75
-          </p>
-          <p className="w-full rounded-full bg-gray-100 py-2 text-center font-bold">
-            25,000 <span className="text-xs font-light">credits for</span> $175
-          </p>
+
+          {pricingData.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => setPricing(item)}
+              className={`w-full rounded-full py-2 text-center font-bold transition-all duration-200 ${
+                isActive(item.id)
+                  ? "border border-primary bg-gray-100 text-primary"
+                  : "bg-gray-100 text-black"
+              }`}
+            >
+              {item.credits}
+              <span className="text-xs font-light">credits for</span>{" "}
+              {item.price}
+            </button>
+          ))}
+          
         </div>
+
+        {/* Right Pricing Summary */}
         <div className="flex flex-col items-center justify-between gap-2 rounded-[40px] bg-primary p-10 lg:rounded-none lg:rounded-r-[40px] lg:rounded-t-[40px]">
-          <h1 className="text-2xl font-bold text-white">$38</h1>
+          <h1 className="text-2xl font-bold text-white">{pricing.price}</h1>
           <div className="ml-6 flex w-full items-center justify-center gap-10">
             <div>
-              <h1 className="text-2xl text-white">5,000</h1>
+              <h1 className="text-2xl text-white">{pricing.credits}</h1>
               <p className="text-gray-300">credits</p>
             </div>
             <img src={Line} alt="" />
             <div>
-              <h1 className="text-2xl text-white">$0.0076</h1>
+              <h1 className="text-2xl text-white">{pricing.costPerCredit}</h1>
               <p className="text-gray-300">Cost Per Credit</p>
             </div>
           </div>
-          <button className="w-full rounded-full bg-[#0F162E] py-4 text-sm text-white">
+
+          {/* Image display if available */}
+       
+
+          <button className="w-full rounded-full bg-[#0F162E] py-4 text-sm text-white hover:bg-white hover:text-[#0F162E]">
             Get Started Free
           </button>
           <p className="text-sm text-gray-300">Includes 250 free credits</p>
+
           <div className="flex flex-col items-center justify-center gap-2">
             <div className="flex gap-4">
               <BadgeCheck className="fill-white text-primary" />

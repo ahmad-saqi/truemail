@@ -5,10 +5,10 @@ const hero = () => {
   return (
     <div
       id="home"
-      className="mt-20 grid h-full min-h-screen w-full grid-cols-1 bg-[#0F162E] py-8 md:grid-cols-2 lg:px-10"
+      className="pt-20 grid h-full w-full grid-cols-1 bg-[#0F162E] py-10 md:grid-cols-2 lg:min-h-screen lg:px-20"
     >
-      <div className="items center flex flex-col justify-center gap-8 px-4 lg:px-10">
-        <h1 className="font-faktum text-3xl font-bold text-white md:text-6xl">
+      <div className="items center flex flex-col justify-center gap-8  ">
+        <h1 className="font-faktum md:text-md text-3xl font-bold text-white md:text-6xl">
           The most accurate email verification tool
         </h1>
         <p className="text-sx text-gray-300 lg:text-xl">
@@ -17,13 +17,13 @@ const hero = () => {
         </p>
         <div className="flex gap-2">
           <div className="flex flex-col gap-4">
-            <button className="w-fit rounded-full bg-primary px-6 py-3 text-xs font-light text-white lg:px-6">
+            <button className="w-fit rounded-full border border-primary bg-primary px-6 py-3 font-light text-white hover:bg-[#19223F] hover:text-primary lg:px-6">
               Get Started Free
             </button>
-            <p className="text-xs text-white">Includes 250 free credits</p>
+            <p className="text-xs text-white">Includes 100 free credits</p>
           </div>
           <div>
-            <img src={Aerow} alt="" />
+            <img src={Aerow} alt="" className="duration-300 hover:scale-105" />
             <div className="-rotate-12 pl-12 pt-2">
               <p className="text-center font-gochi text-[16px] leading-[16px] text-white">
                 No credit <br />
@@ -33,8 +33,8 @@ const hero = () => {
           </div>
         </div>
       </div>
-      <div className="">
-        <img src={HeroImg} alt="" className="" />
+      <div className="mt-10 flex items-center justify-end md:mb-20 md:mt-0">
+        <img src={HeroImg} alt="" className="duration-300 hover:scale-105" />
       </div>
     </div>
   );
