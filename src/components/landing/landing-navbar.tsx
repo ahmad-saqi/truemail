@@ -7,7 +7,7 @@ const LandingNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 z-50 flex h-20 w-full items-center justify-between bg-[#19223F] px-6 md:px-20">
+    <nav className="fixed top-0 z-50 flex h-20 w-full items-center justify-between bg-[#19223F]/50 backdrop:blur-md  px-6 md:px-20">
       <a href="/" className="w-[270px] text-3xl font-bold text-white cursor-pointer">Truemail</a>
 
       {/* Desktop Nav */}

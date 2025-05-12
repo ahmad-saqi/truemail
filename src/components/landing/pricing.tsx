@@ -67,7 +67,7 @@ const Pricing = () => {
               onClick={() => setPricing(item)}
               className={`w-full rounded-full py-2 text-center font-bold transition-all duration-200 ${
                 isActive(item.id)
-                  ? "border-2 border-primary bg-white text-primary"
+                  ? "border border-primary bg-gray-100 text-primary"
                   : "bg-gray-100 text-black"
               }`}
             >
@@ -97,7 +97,7 @@ const Pricing = () => {
           {/* Image display if available */}
        
 
-          <button className="w-full rounded-full bg-[#0F162E] py-4 text-sm text-white">
+          <button className="w-full rounded-full bg-[#0F162E] py-4 text-sm text-white hover:bg-white hover:text-[#0F162E]">
             Get Started Free
           </button>
           <p className="text-sm text-gray-300">Includes 250 free credits</p>

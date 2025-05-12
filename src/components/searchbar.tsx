@@ -73,7 +73,7 @@ const Searchbar = () => {
       </div>
 
       {showEmailForm ? <EmailForm /> : null}
-      <ImageUplodeModal />
+      {/* <ImageUplodeModal /> */}
     </div>
   );
 };

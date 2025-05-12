@@ -95,7 +95,7 @@ const SignupPage = () => {
 
     // Only proceed if both fields are filled and valid
     if (email && password && validateEmail() && validatePassword()) {
-      navigate("/");
+      navigate("/searchPage");
     }
   };
 
@@ -184,8 +184,7 @@ const SignupPage = () => {
                 </a>
               </div>
               <div className="flex w-full items-center justify-center">
-                <Link
-                  to="/"
+                <button
                   onClick={(e) => {
                     e.preventDefault();
                     handleLogin();
@@ -193,7 +192,7 @@ const SignupPage = () => {
                   className="rounded-full mt-5 w-full cursor-pointer bg-[#0F162E] p-4 px-5 text-center text-white transition-shadow duration-500 hover:shadow-lg md:px-10"
                 >
                   Login
-                </Link>
+                </button>
               </div>
             </div>
           </div>

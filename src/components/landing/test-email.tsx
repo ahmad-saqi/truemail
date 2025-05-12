@@ -20,7 +20,7 @@ const TestEmail = () => {
         </p>
       </div>
       <div className="flex flex-col items-center justify-center gap-6 rounded-2xl bg-gray-100 p-10">
-        <button className="flex w-full items-center justify-center gap-2 rounded-full hover:drop-shadow-xl duration-300 bg-[#0F162E] py-2 text-white">
+        <button className="flex w-full items-center justify-center gap-2 rounded-full hover:drop-shadow-xl duration-300 bg-[#0F162E] py-2 text-white hover:bg-white border hover:border-[#0F162E] hover:text-[#0F162E]">
           <Upload /> Upload Your List
         </button>
         <div className="w-4/5">
