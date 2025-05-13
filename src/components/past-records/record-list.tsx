@@ -42,17 +42,17 @@ const RecordList = () => {
         <thead>
           <tr className="bg-gray-100 text-left">
             <th className="p-4">File Name</th>
-            <th className="p-4">Deliverable</th>
-            <th className="p-4">Total Emails</th>
-            <th className="p-4">Status</th>
-            <th className="p-4">Action</th>
+            <th className="p-4 text-center">Deliverable</th>
+            <th className="p-4 text-center">Total Emails</th>
+            <th className="p-4 text-center">Status</th>
+            <th className="p-4 flex justify-end">Action</th>
           </tr>
         </thead>
         <tbody>
           {records.map((record) => (
             <tr key={record.id} className="border-b hover:bg-gray-50">
-              <td className="p-4">
-                <div className="flex items-center gap-2">
+              <td className="p-4 w-68">
+                <div className="flex items-center gap-2 truncate">
                   <img src={Image} alt="" className="size-6" />
                   {editingId === record.id ? (
                     <>
@@ -86,16 +86,16 @@ const RecordList = () => {
                   <span className="text-sm font-normal">Processing</span>
                 </p>
               </td>
-              <td className="p-4 font-semibold">
+              <td className="p-4 font-semibold text-center">
                 {record.totalEmails.toLocaleString()}
               </td>
-              <td className="p-4">
-                <span className="rounded-full bg-primary px-4 py-1 text-sm text-white">
+              <td className="p-4 ">
+                <div className="rounded-full text-center bg-primary px-4 py-1 text-sm text-white w-full">
                   {record.status}
-                </span>
+                </div>
               </td>
               <td className="p-4">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center justify-end gap-2">
                   <button className="flex items-center gap-1 rounded-full bg-gray-100 px-4 py-2 text-sm text-primary">
                     View <ChevronRight size={16} />
                   </button>
