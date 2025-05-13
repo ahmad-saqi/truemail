@@ -10,7 +10,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { z } from "zod";
 
 import logo from "../assets/img/aerow.svg";
-import bgimage from "../assets/img/aerow.svg";
+import bgimage from "../assets/img/bglines.svg"
+import Microsoft from "../assets/img/microsoft.svg"
 import Imagecomp from "../components/imagecomp";
 
 const SignupPage = () => {
@@ -119,7 +120,7 @@ const SignupPage = () => {
                 </p>
               </button>
               <button className="flex w-full cursor-pointer items-center justify-center gap-4 rounded-3xl border border-gray-200 p-2 transition-shadow duration-500 hover:shadow-lg md:p-3">
-                <FaLinkedin className="size-6 fill-blue-600" />
+                <img src={Microsoft} alt="Microsoft" className="size-6 " />
                 <p className="hidden text-lg md:block">
                   Login with <span className="font-bold">Linkedin</span>
                 </p>

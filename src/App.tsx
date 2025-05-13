@@ -1,24 +1,26 @@
 import { Route, Routes } from "react-router-dom";
 
-import Landing from "./pages/landing";
-import Signup from "./pages/signupPage";
-import Login from "./pages/loginPage";
-import Single from "./pages/single";
-import Profile from "./pages/profilePage";
 import Billing from "./pages/billing";
-import Home from "./pages/home";
 import Bulk from "./pages/bulk";
+import Home from "./pages/home";
+import Landing from "./pages/landing";
+import Login from "./pages/loginPage";
+import Profile from "./pages/profilePage";
 import Records from "./pages/records";
+import Signup from "./pages/signupPage";
+import Single from "./pages/single";
+import HelpPage from "./pages/helpPage";
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Landing />} />
-    <Route path="/signup" element={<Signup />} />
+      <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />
       <Route path="/single" element={<Single />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/billing" element={<Billing />} />
+      <Route path="/helpPage" element={<HelpPage />} />
       <Route path="/home" element={<Home />} />
       <Route path="/bulk" element={<Bulk />} />
       <Route path="/records" element={<Records />} />

@@ -115,10 +115,10 @@ const Navbar = () => {
                   <img src={Atm} className="size-5 text-black"/>
                     <li><a href="#" className=" text-lg text-black">Billing</a></li>
                   </Link>
-                  <div className="flex justify-start items-center gap-2 px-4 py-2 hover:bg-gray-100 rounded-md">
+                  <Link to="/helpPage" className="flex justify-start items-center gap-2 px-4 py-2 hover:bg-gray-100 rounded-md">
                     <MdHelp className="size-5 text-black"/>
                     <li><a href="#" className=" text-lg text-black">Help</a></li>
-                  </div>
+                  </Link>
                   <div className="flex justify-start items-center gap-2 px-4 py-2 hover:bg-gray-100 rounded-b-2xl">
                     <CiLogout className="size-5 text-black"/>
                     <li><a href="#" className=" text-lg text-black">Sign Out</a></li>

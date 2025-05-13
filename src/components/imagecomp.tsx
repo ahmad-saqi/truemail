@@ -1,5 +1,5 @@
-import star from "../assets/img/aerow.svg";
-import image from "../assets/img/aerow.svg";
+import star from "../assets/img/star.svg";
+import woman from "../assets/img/women.svg";
 
 const Imagecomp = () => {
   return (
@@ -8,7 +8,7 @@ const Imagecomp = () => {
         <p className="w-[60%] text-2xl font-bold text-white lg:text-6xl">
           Very good works are waiting for you Login Now!!!
         </p>
-        <img src={image} alt="" className="absolute -right-28 top-0" />
+        <img src={woman} alt="" className="absolute -right-28 top-0" />
       </div>
       <div className="absolute -left-[7%] top-[70%] rounded-full bg-white p-6">
         <img src={star} alt="shine" className="aspect-square w-12" />
