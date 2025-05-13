@@ -31,18 +31,18 @@ const Searchbar = () => {
         <span className="w-full text-center text-5xl font-bold">
           Test the Email Validator
         </span>
-        <div className="mt-14 flex w-full items-center justify-center rounded-full bg-white p-4 shadow-lg">
+        <div className="relative w-full mt-8">
           <input
             type="email"
             placeholder="Enter your email"
-            className="flex bg-transparent sw h-full flex-1 items-center justify-center px-4 focus-visible:outline-none"
+            className="flex w-full h-full  items-center justify-center p-8 rounded-full bg-white shadow-md  focus-visible:outline-none"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <div className="flex gap-2">
+          <div className="absolute top-3 right-2 flex gap-2">
             <button
               type="submit"
-              className={`flex cursor-pointer items-center justify-center gap-2 rounded-full p-3 px-8 font-bold ${
+              className={`flex cursor-pointer items-center justify-center gap-2 rounded-full p-4 px-8 font-bold text-lg ${
                 isValidEmail(email)
                   ? "bg-[#3D6BD8] text-white"
                   : "bg-gray-200 text-[#3D6BD8]"
