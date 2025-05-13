@@ -4,7 +4,7 @@ import { IoIosSend } from "react-icons/io";
 import { RiMailAddFill } from "react-icons/ri";
 
 import EmailForm from "./emailForm";
-import ImageUplodeModal from "./imageUplodeModal";
+// import ImageUplodeModal from "./imageUplodeModal";
 import UplodeTmage from "./upload-image";
 
 const Searchbar = () => {
