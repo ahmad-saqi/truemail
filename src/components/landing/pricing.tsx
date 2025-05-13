@@ -2,7 +2,6 @@ import { useState } from "react";
 
 import { BadgeCheck } from "lucide-react";
 
-import Image5000 from "../../assets/img/Frame.png";
 import Line from "../../assets/img/pricing.svg";
 
 // update path if needed
@@ -19,7 +18,6 @@ const pricingData = [
     price: "$38",
     credits: "5,000",
     costPerCredit: "$0.0076",
-    image: Image5000, // only this option has an image
   },
   {
     id: 3,

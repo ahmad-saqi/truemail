@@ -9,8 +9,8 @@ import {
 } from "lucide-react";
 
 import SolutionImg from "../../assets/img/solutionimg.svg";
-import RealTime from "../../assets/img/realtime.png";
-import AutoSolution from "../../assets/img/autosolution.png";
+import RealTime from "../../assets/img/realtime.svg";
+import AutoSolution from "../../assets/img/automate.svg";
 
 const Solutions = () => {
   const [activeSolution, setActiveSolution] = useState<

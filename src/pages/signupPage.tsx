@@ -12,8 +12,8 @@ import { RiEyeOffLine } from "react-icons/ri";
 import { Link, useNavigate } from "react-router-dom";
 import { z } from "zod";
 
-import logo from "../assets/img/Truemaillogo.png";
-import bgimage from "../assets/img/bgimage.png";
+import logo from "../assets/img/aerow.svg";
+import bgimage from "../assets/img/aerow.svg";
 import Imagecomp from "../components/imagecomp";
 
 const SignupPage = () => {
@@ -164,12 +164,12 @@ const SignupPage = () => {
                 </legend>
               </fieldset>
 
-              <div className="flex h-full w-full items-center gap-2  rounded-3xl bg-[#F0EDFFCC] p-3 transition-shadow duration-500 hover:shadow-md">
+              <div className="flex h-full w-full items-center gap-2 rounded-3xl bg-[#F0EDFFCC] p-3 transition-shadow duration-500 hover:shadow-md">
                 <BsPerson className="ml-2 size-6" />
                 <input
                   type="text"
                   placeholder="Enter Full Name"
-                  className="mr-3 w-full outline-none bg-[#F0EDFFCC] "
+                  className="mr-3 w-full bg-[#F0EDFFCC] outline-none"
                   value={username}
                   onChange={(e) => {
                     setUsername(e.target.value);
@@ -182,12 +182,12 @@ const SignupPage = () => {
                 <p className="text-sm text-red-500">{usernameError}</p>
               )}
 
-              <div className="flex h-full w-full items-center gap-2  rounded-3xl bg-[#F0EDFFCC] p-3 transition-shadow duration-500 hover:shadow-md">
+              <div className="flex h-full w-full items-center gap-2 rounded-3xl bg-[#F0EDFFCC] p-3 transition-shadow duration-500 hover:shadow-md">
                 <IoMailUnreadOutline className="ml-2 size-6" />
                 <input
                   type="email"
                   placeholder="Enter Email"
-                  className="mr-3 w-full outline-none bg-[#F0EDFFCC] "
+                  className="mr-3 w-full bg-[#F0EDFFCC] outline-none"
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);
@@ -200,13 +200,13 @@ const SignupPage = () => {
                 <p className="text-sm text-red-500">{emailError}</p>
               )}
 
-              <div className="flex h-full w-full items-center gap-2  rounded-3xl bg-[#F0EDFFCC] p-3 transition-shadow duration-500 hover:shadow-md">
+              <div className="flex h-full w-full items-center gap-2 rounded-3xl bg-[#F0EDFFCC] p-3 transition-shadow duration-500 hover:shadow-md">
                 <AiTwotoneLock className="ml-2 size-6" />
                 <div className="flex w-full items-center">
                   <input
                     type={eye ? "password" : "text"}
                     placeholder="Enter Password"
-                    className="w-full outline-none bg-[#F0EDFFCC] "
+                    className="w-full bg-[#F0EDFFCC] outline-none"
                     value={password}
                     onChange={(e) => {
                       setPassword(e.target.value);
@@ -275,7 +275,7 @@ const SignupPage = () => {
               <div className="flex w-full items-center justify-center">
                 <button
                   onClick={handleSignup}
-                  className="rounded-4xl mt-2 w-full cursor-pointer bg-[#0F162E] p-2 px-5 text-white transition-shadow duration-500 hover:shadow-lg md:mt-5 md:px-10"
+                  className="mt-5 w-full cursor-pointer rounded-full bg-[#0F162E] p-4 px-5 text-center text-white transition-shadow duration-500 hover:shadow-lg md:px-10"
                 >
                   Sign Up
                 </button>

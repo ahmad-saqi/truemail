@@ -9,8 +9,8 @@ import { RiEyeOffLine } from "react-icons/ri";
 import { Link, useNavigate } from "react-router-dom";
 import { z } from "zod";
 
-import logo from "../assets/img/Truemaillogo.png";
-import bgimage from "../assets/img/bgimage.png";
+import logo from "../assets/img/aerow.svg";
+import bgimage from "../assets/img/aerow.svg";
 import Imagecomp from "../components/imagecomp";
 
 const SignupPage = () => {
@@ -95,7 +95,7 @@ const SignupPage = () => {
 
     // Only proceed if both fields are filled and valid
     if (email && password && validateEmail() && validatePassword()) {
-      navigate("/searchPage");
+      navigate("/home");
     }
   };
 

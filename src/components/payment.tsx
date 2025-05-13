@@ -1,7 +1,7 @@
 import cardtick from "../assets/img/card-tick.svg";
-import HBL from "../assets/img/hbl.png";
-import strpe from "../assets/img/stipe.png";
-import visa from "../assets/img/visa.png";
+import HBL from "../assets/img/aerow.svg";
+import strpe from "../assets/img/aerow.svg";
+import visa from "../assets/img/aerow.svg";
 
 const Payment = () => {
   return (
