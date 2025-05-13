@@ -2,6 +2,7 @@ import { Search } from "lucide-react";
 
 import GridInactive from "../assets/img/gridinactive.svg";
 import ListActive from "../assets/img/listactive.svg";
+import RecordList from "@/components/past-records/record-list";
 
 const Records = () => {
   return (
@@ -26,6 +27,7 @@ const Records = () => {
           </select>
         </div>
       </div>
+      <RecordList />
     </div>
   );
 };
