@@ -1,5 +1,5 @@
-import star from "../assets/img/thunderbolt 1.png";
-import image from "../assets/img/women with tab 1.png";
+import star from "../assets/img/aerow.svg";
+import image from "../assets/img/aerow.svg";
 
 const Imagecomp = () => {
   return (

@@ -1,32 +1,41 @@
-import { MdHelp } from "react-icons/md";
-import girl from "../assets/img/asim.png"
-import { CiLogout } from "react-icons/ci";;
+import { useEffect, useRef, useState } from "react";
+
+
+
 import { BsPersonFill } from "react-icons/bs";
-import { IoMailUnread } from "react-icons/io5"
-import logo from "../assets/img/navlogo.png";
-import credits from "../assets/img/image.png";
-import Atm from "../assets/img/card-pos.png";
-// import { GiHamburgerMenu } from "react-icons/gi";
-import IconData from "../assets/img/icondata.svg";
-import profile from "../assets/img/asim.png";
-import { useState, useRef, useEffect } from "react";
+import { CiLogout } from "react-icons/ci";
+import { IoMailUnread } from "react-icons/io5";
+import { MdHelp } from "react-icons/md";
 import { Link } from "react-router-dom";
-import IconAccount from "../assets/img/iconaccount.svg";
+
+
+
+
+import profile from "../assets/img/profile.svg";
+import Atm from "../assets/img/billing.svg";
+import IconData from "../assets/img/icondata.svg";
+import credits from "../assets/img/credit.svg";
+import logo from "../assets/img/logo.svg";
+
+
+
+
 
 const menuItems = [
-  { label: "Bulk" },
-  { label: "Single" },
-  { label: "Deliverability" },
+  { label: "Home", path: "/home" },
+  { label: "Bulk", path: "/bulk" },
+  { label: "Single", path: "/single" },
 ];
 
-const MenuItem = ({ label }: { label: string }) => (
-  <div className="flex items-center gap-2">
-    <div className="bg-white rounded-full p-2 text-blue-500">
+const MenuItem = ({ label, path }: { label: string; path: string }) => (
+  <Link to={path} className="flex items-center gap-2 hover:opacity-80">
+    <div className="rounded-full bg-white p-2 text-blue-500">
       <IoMailUnread className="size-6" />
     </div>
     <p className="text-lg font-semibold">{label}</p>
-  </div>
+  </Link>
 );
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,9 +66,10 @@ const Navbar = () => {
 
         {/* Menu Items */}
         <nav className="flex flex-col md:flex-row items-center gap-8 ml-20 cursor-pointer">
-          {menuItems.map((item) => (
-            <MenuItem key={item.label} label={item.label} />
-          ))}
+         {menuItems.map((item) => (
+  <MenuItem key={item.label} label={item.label} path={item.path} />
+))}
+
         </nav>
 
         <div className="flex items-center gap-8">
@@ -84,7 +94,7 @@ const Navbar = () => {
             {isOpen && (
               <div className="absolute right-0 mt-4 mr-3 w-[220px] bg-white border border-gray-200 rounded-l-2xl rounded-b-2xl shadow-lg z-50 px-3">
                 <Link to="/profile"   className=" flex gap-3 justify-center items-center mt-3" >
-                  <img src={girl} alt="" className="h-10 w-10 rounded-full"/>
+                  <img src={profile} alt="" className="h-10 w-10 rounded-full"/>
                   <p className="font">Rehan Siddique</p>
                 </Link>
                 <div className="px-5 flex flex-col gap-3 justify-start  mt-3 border-b-2 border-gray-200 ">
@@ -96,10 +106,7 @@ const Navbar = () => {
                     <BsPersonFill className="size-5 text-black"/>
                     <li><a href="/profile" className=" text-lg text-black">Profile</a></li>
                   </div>
-                  <div className="flex justify-start items-center gap-2 px-4 py-2 hover:bg-gray-100 rounded-md">
-                  <img src={IconAccount} className="size-5 text-black"/>
-                    <li><a href="#" className=" text-lg text-black">Account</a></li>
-                  </div>
+                  
                   <div className="flex justify-start items-center gap-2 px-4 py-2 hover:bg-gray-100 rounded-md">
                   <img src={IconData} className="size-5 text-black"/>
                     <li><a href="#" className=" text-lg text-black">Integration</a></li>
