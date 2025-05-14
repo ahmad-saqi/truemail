@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { AiTwotoneLock } from "react-icons/ai";
-import { FaLinkedin } from "react-icons/fa";
+// import { FaLinkedin } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { IoMailUnreadOutline } from "react-icons/io5";
 import { RiEyeLine } from "react-icons/ri";
@@ -178,7 +178,7 @@ const SignupPage = () => {
               )}
               <div className="flex items-end justify-end">
                 <a
-                  href="#"
+                  href="/forgot"
                   className="md:ml-70 ml-40 font-semibold text-blue-400"
                 >
                   Forgot Password?
