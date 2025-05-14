@@ -87,7 +87,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="bg-white rounded-full p-2 px-6 flex items-center gap-3 cursor-pointer"
             >
-              <p>Rehan Siddique</p>
+              <p>Woman Picture</p>
               <img src={profile} alt="User Profile" className="size-8 rounded-full" />
             </button>
 
@@ -95,7 +95,7 @@ const Navbar = () => {
               <div className="absolute right-0 mt-4 mr-3 w-[220px] bg-white border border-gray-200 rounded-l-2xl rounded-b-2xl shadow-lg z-50 px-3">
                 <Link to="/profile"   className=" flex gap-3 justify-center items-center mt-3" >
                   <img src={profile} alt="" className="h-10 w-10 rounded-full"/>
-                  <p className="font">Rehan Siddique</p>
+                  <p className="font">Woman Picture</p>
                 </Link>
                 <div className="px-5 flex flex-col gap-3 justify-start  mt-3 border-b-2 border-gray-200 ">
                   <p className="text-gray-500">CREDIT BALANCE</p>

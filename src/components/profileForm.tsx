@@ -34,8 +34,8 @@ const ProfileForm = () => {
             />
           </div>
         </div>
-        <div className="mt-15 mb-5 flex justify-end">
-          <button className="cursor-pointer rounded-full border bg-[#3D6BD8] px-7 py-4 text-white hover:border-[#3D6BD8] hover:bg-white hover:text-[#3D6BD8]">
+        <div className=" mt-5 flex justify-end">
+          <button className=" mb-5 cursor-pointer rounded-full border bg-[#3D6BD8] px-7 py-4 text-white hover:border-[#3D6BD8] hover:bg-white hover:text-[#3D6BD8]">
             Save
           </button>
         </div>
@@ -52,7 +52,7 @@ const ProfileForm = () => {
             <input
               type={eye1 ? "password" : "text"}
               placeholder="Enter Password"
-              className="w-full p-4 outline-none"
+              className="w-full p-4 outline-none bg-gray-100 rounded-full"
               value={password1}
               onChange={(e) => {
                 setPassword1(e.target.value);
@@ -78,7 +78,7 @@ const ProfileForm = () => {
               <input
                 type={eye ? "password" : "text"}
                 placeholder="Enter Password"
-                className="w-full p-4 outline-none"
+                className="w-full p-4 outline-none bg-gray-100 rounded-full"
                 value={password}
                 onChange={(e) => {
                   setPassword(e.target.value);
@@ -103,7 +103,7 @@ const ProfileForm = () => {
               <input
                 type={eye2 ? "password" : "text"}
                 placeholder="Enter Password"
-                className="w-full p-4 outline-none"
+                className="w-full p-4 outline-none bg-gray-100 rounded-full"
                 value={password2}
                 onChange={(e) => {
                   setPassword2(e.target.value);
@@ -121,8 +121,8 @@ const ProfileForm = () => {
             </div>
           </div>
         </div>
-        <div className="mt-15 mb-5 flex justify-end">
-          <button className="cursor-pointer rounded-full border bg-[#3D6BD8] px-7 py-4 text-white hover:border-[#3D6BD8] hover:bg-white hover:text-[#3D6BD8]">
+        <div className=" mt-5 flex justify-end">
+          <button className=" mb-5 cursor-pointer rounded-full border bg-[#3D6BD8] px-7 py-4 text-white hover:border-[#3D6BD8] hover:bg-white hover:text-[#3D6BD8]">
             Save
           </button>
         </div>
