@@ -10,12 +10,14 @@ import Records from "./pages/records";
 import Signup from "./pages/signupPage";
 import Single from "./pages/single";
 import HelpPage from "./pages/helpPage";
+import FrogetPage from "./pages/frogetPage";
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Landing />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/forgot" element={<FrogetPage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/single" element={<Single />} />
       <Route path="/profile" element={<Profile />} />
