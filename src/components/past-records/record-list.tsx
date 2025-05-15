@@ -1,8 +1,17 @@
 import { useState } from "react";
 
+
+
 import { ChevronLeft, ChevronRight, Trash } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+
+
 
 import Image from "../../assets/img/g1.svg";
+
+
+
+
 
 const recordsPerPage = 7;
 
@@ -28,6 +37,8 @@ const RecordList = () => {
   const startItem = startIndex + 1;
   const endItem = Math.min(endIndex, records.length);
   const totalItems = records.length;
+
+  const navigate = useNavigate();
 
   const handleEditClick = (id: number, name: string) => {
     setEditingId(id);
@@ -136,7 +147,8 @@ const RecordList = () => {
               </td>
               <td className="px-4 py-2">
                 <div className="flex items-center justify-end gap-2">
-                  <button className="flex items-center gap-1 rounded-full bg-gray-100 px-4 py-2 text-sm text-primary">
+                  <button className="flex items-center gap-1 rounded-full bg-gray-100 px-4 py-2 text-sm text-primary"
+                    onClick={() => navigate("/overview")}>
                     View <ChevronRight size={16} />
                   </button>
                   <button>

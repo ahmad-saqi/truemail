@@ -1,6 +1,13 @@
 import { useState } from "react";
 
+
+
 import { ChevronLeft, ChevronRight, Trash2 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+
+
+
+
 
 const generateCards = () =>
   Array.from({ length: 20 }, (_, i) => ({
@@ -27,6 +34,8 @@ const RecordGrid = () => {
   const handleDelete = (id: number) => {
     setCards((prev) => prev.filter((card) => card.id !== id));
   };
+
+  const navigate = useNavigate();
 
   const handlePageChange = (page: number) => {
     if (page >= 1 && page <= totalPages) {
@@ -106,7 +115,8 @@ const RecordGrid = () => {
               </div>
             </div>
 
-            <button className="flex items-center gap-1 rounded-full bg-primary px-10 py-4 text-sm text-white hover:bg-primary/70">
+            <button className="flex items-center gap-1 rounded-full bg-primary px-10 py-4 text-sm text-white hover:bg-primary/70"
+            onClick={() => navigate("/overview")}>
               View Results <ChevronRight size={16} />
             </button>
           </div>
