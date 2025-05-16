@@ -1,8 +1,7 @@
 import { useState } from "react";
-
 import { BadgeCheck } from "lucide-react";
-
 import Line from "../../assets/img/pricing.svg";
+import princingTick from "../../assets/img/princingTick.svg";
 
 // update path if needed
 
@@ -70,8 +69,11 @@ const Pricing = () => {
               }`}
             >
               {item.credits}
-              <span className="text-xs font-light">credits for</span>{" "}
+              <span className="text-xs font-light">credits for</span>
               {item.price}
+              <div className="float-right">
+                <img src={princingTick} className="float-right mr-8 h-5 w-5" alt="" />
+              </div>
             </button>
           ))}
           
