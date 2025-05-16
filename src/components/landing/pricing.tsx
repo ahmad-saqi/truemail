@@ -1,5 +1,7 @@
 import { useState } from "react";
+
 import { BadgeCheck } from "lucide-react";
+
 import Line from "../../assets/img/pricing.svg";
 import princingTick from "../../assets/img/princingTick.svg";
 
@@ -11,24 +13,28 @@ const pricingData = [
     price: "$18",
     credits: "2,000",
     costPerCredit: "$0.009",
+    pricingTIck: princingTick,
   },
   {
     id: 2,
     price: "$38",
     credits: "5,000",
     costPerCredit: "$0.0076",
+    pricingTIck: princingTick,
   },
   {
     id: 3,
     price: "$75",
     credits: "10,000",
     costPerCredit: "$0.0075",
+    pricingTIck: princingTick,
   },
   {
     id: 4,
     price: "$175",
     credits: "25,000",
     costPerCredit: "$0.007",
+    pricingTIck: princingTick,
   },
 ];
 
@@ -69,14 +75,19 @@ const Pricing = () => {
               }`}
             >
               {item.credits}
-              <span className="text-xs font-light">credits for</span>
+              <span className="text-xs font-light"> credits for </span>
               {item.price}
-              <div className="float-right">
-                <img src={princingTick} className="float-right mr-8 h-5 w-5" alt="" />
-              </div>
+              {isActive(item.id) && (
+                <div className="float-right flex items-center">
+                  <img
+                    src={item.pricingTIck}
+                    className="float-right mr-8 h-5 w-5"
+                    alt="tick"
+                  />
+                </div>
+              )}
             </button>
           ))}
-          
         </div>
 
         {/* Right Pricing Summary */}
@@ -95,7 +106,6 @@ const Pricing = () => {
           </div>
 
           {/* Image display if available */}
-       
 
           <button className="w-full rounded-full bg-[#0F162E] py-4 text-sm text-white hover:bg-white hover:text-[#0F162E]">
             Get Started Free

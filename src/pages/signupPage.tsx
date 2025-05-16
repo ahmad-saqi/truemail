@@ -3,7 +3,6 @@ import { useState } from "react";
 import { AiTwotoneLock } from "react-icons/ai";
 import { BiSolidErrorAlt } from "react-icons/bi";
 import { BsPerson } from "react-icons/bs";
-
 import { FaCheck } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { IoMailUnreadOutline } from "react-icons/io5";
@@ -13,8 +12,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { z } from "zod";
 
 import logo from "../assets/img/aerow.svg";
-import bgimage from "../assets/img/bglines.svg"
-import Microsoft from "../assets/img/microsoft.svg"
+import fullImage from "../assets/img/athanction.svg";
+import Microsoft from "../assets/img/microsoft.svg";
 import Imagecomp from "../components/imagecomp";
 
 const SignupPage = () => {
@@ -132,8 +131,8 @@ const SignupPage = () => {
   };
 
   return (
-    <div className="grid h-screen w-full grid-cols-1 lg:grid-cols-2">
-      <div className="flex items-center justify-center bg-white">
+    <div className=" h-screen w-full flex">
+      <div className="flex flex-1 h-screen overflow-y-auto items-start justify-center bg-white">
         <div className="flex w-full flex-col items-center justify-center p-10">
           <img src={logo} alt="" />
           <div className="mt-3 flex flex-col items-center justify-center md:mt-7">
@@ -151,7 +150,7 @@ const SignupPage = () => {
                 </p>
               </button>
               <button className="flex w-full cursor-pointer items-center justify-center gap-4 rounded-3xl border border-gray-200 p-2 transition-shadow duration-500 hover:shadow-lg md:p-3">
-                <img src={Microsoft} alt="Microsoft" className="size-6 "/>
+                <img src={Microsoft} alt="Microsoft" className="size-6" />
                 <p className="hidden text-lg md:block">
                   Login with <span className="font-bold">Microsoft</span>
                 </p>
@@ -292,11 +291,15 @@ const SignupPage = () => {
           </div>
         </div>
       </div>
-      <div className="relative hidden lg:block">
-        <img src={bgimage} alt="" className="h-screen w-full object-cover" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <Imagecomp />
-        </div>
+      <div className="relative hidden w-[40%] h-full  md:block bg-[#0F162E]" >
+        {/* <div className="relative h-full w-full bg-no-repeat bg-center" style={{backgroundImage: `url(${fullImage})`}}></div> */}
+        <img src={fullImage} alt="" className="relative w-full h-full" />
+        <p className="absolute right-[45%] top-[150px] w-[40%] z-10 text-5xl font-bold text-white" style={{transform: "scale(1)", transformOrigin: "0 0"}}>The Most accurate email verification tool in the industry.</p>
+        {/* <div className="absolute right-[45%] top-[150px] w-[40%]">
+          <p className="z-10 text-5xl text-white">
+            The Most accurate email verification tool in the industry.
+          </p>
+        </div> */}
       </div>
     </div>
   );

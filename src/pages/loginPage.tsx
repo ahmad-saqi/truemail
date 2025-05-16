@@ -122,7 +122,7 @@ const SignupPage = () => {
               <button className="flex w-full cursor-pointer items-center justify-center gap-4 rounded-3xl border border-gray-200 p-2 transition-shadow duration-500 hover:shadow-lg md:p-3">
                 <img src={Microsoft} alt="Microsoft" className="size-6 " />
                 <p className="hidden text-lg md:block">
-                  Login with <span className="font-bold">Linkedin</span>
+                  Login with <span className="font-bold">Microsoft</span>
                 </p>
               </button>
             </div>
@@ -179,7 +179,7 @@ const SignupPage = () => {
               <div className="flex items-end justify-end">
                 <a
                   href="/forgot"
-                  className="md:ml-70 ml-40 font-semibold text-blue-400"
+                  className=" font-semibold text-blue-400"
                 >
                   Forgot Password?
                 </a>

@@ -45,14 +45,14 @@ const Faqs = () => {
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the
       </p>
-      <div className="grid w-full gap-20 lg:grid-cols-2">
+      <div className="grid w-full gap-20 lg:grid-cols-2 ">
         {faqsData.map((faq, index) => {
           const isExpanded = expandedIndexes.includes(index);
           return (
             <div key={index}>
               <h2 className="font-bold lg:text-xl">{faq.question}</h2>
               <p
-                className={`overflow-hidden text-xs text-gray-500 transition-all duration-300 ${
+                className={`overflow-hidden text-xs text-gray-500 transition-all duration-300  ${
                   isExpanded ? "" : "line-clamp-3"
                 }`}
               >
@@ -60,7 +60,7 @@ const Faqs = () => {
               </p>
               <button
                 onClick={() => toggleReadMore(index)}
-                className="mt-2 text-primary underline"
+                className="mt-2 ml-3 text-primary underline hover:scale-105 duration-200"
               >
                 {isExpanded ? "Show Less" : "Read More"}
               </button>
