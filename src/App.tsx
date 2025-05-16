@@ -11,6 +11,8 @@ import Signup from "./pages/signupPage";
 import Single from "./pages/single";
 import HelpPage from "./pages/helpPage";
 import FrogetPage from "./pages/frogetPage";
+import Overview from "./pages/overview";
+import ViewEmails from "./pages/view-emails";
 
 const App = () => {
   return (
@@ -26,6 +28,8 @@ const App = () => {
       <Route path="/home" element={<Home />} />
       <Route path="/bulk" element={<Bulk />} />
       <Route path="/records" element={<Records />} />
+      <Route path="/overview" element={<Overview />} />
+      <Route path="/view-emails" element={<ViewEmails />} />
       {/* <Route
         element={
           <RouteGuard>
